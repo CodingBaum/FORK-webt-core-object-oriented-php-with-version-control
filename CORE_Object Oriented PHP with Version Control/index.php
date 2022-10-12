@@ -14,7 +14,7 @@
         </header>
         <div>
             <?php
-                require ("Video.php");
+                require("Video.php");
 
                 $youtubeVideo = new YoutubeVideo("The Dragon Palace", 'https://www.youtube.com/embed/EoIhINb85kA');
                 echo $youtubeVideo->getHTMLCode();
