@@ -12,7 +12,7 @@
             </h1>
             <hr>
         </header>
-        <div id="yt">
+        <div class="yt">
             <?php
                 require("Video.php");
 
