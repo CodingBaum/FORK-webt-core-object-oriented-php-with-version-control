@@ -12,7 +12,7 @@
             </h1>
             <hr>
         </header>
-        <div>
+        <div id="yt">
             <?php
                 require("Video.php");
 
@@ -30,7 +30,10 @@
 
                 $youtubeVideo = new YoutubeVideo("Beautiful Little Greenhouse Tutorial", 'https://www.youtube.com/embed/X6p65QXlI3A');
                 echo $youtubeVideo->getHTMLCode();
-
+            ?>
+        </div>
+        <div id="vimeo">
+            <?php
                 $vimeoVideo = new Vimeo("Oasis - a love letter to San Francisco", "https://player.vimeo.com/video/721214409?h=a4376a0ed2");
                 echo $vimeoVideo->getHTMLCode();
 

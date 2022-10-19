@@ -7,4 +7,14 @@ body {
   color: black;
 }
 
+iframe {
+  width: 40%;
+}
+
+#yt {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=style.css.map */
