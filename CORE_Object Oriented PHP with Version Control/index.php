@@ -2,12 +2,12 @@
 <html lang="en">
     <head>
         <title> Video website dies das idk NILS IST LOST </title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="test.css">
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     </head>
     <body>
-        <header> 
-            <h1>
+        <header>
+            <h1 class="text-3xl font-bold underline">
                 Das ist ein toller Titel
             </h1>
             <hr>
