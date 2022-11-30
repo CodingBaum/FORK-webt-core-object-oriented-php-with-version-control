@@ -11,9 +11,9 @@ class Seeder {
         for ($i = 0; $i < 3; $i++) {
             $currentSongs = array();
             for ($j = 0; $j < 4; $j++) {
-                array_push($currentSongs, new Song(uniqueID(), getRandomWord(), getRandomWord(), $j, mt_rand() / mt_getrandmax()));
+                array_push($currentSongs, new Song(uniqueID(), getRandomWord(), getRandomWord(), $j, rand(200, 400)/100));
             }
-            array_push($this->OSTs, $currentSongs);
+            array_push($this->OSTs, new OST($i, getRandomWord(), getRandomWord(), rand(2000,2015), $currentSongs));
         }
     }
 
@@ -27,11 +27,7 @@ function uniqueID(){
     if(in_array($zwerg,$arr,false)){
         uniqueID();
     }
-    else{
-        return $zwerg;
-    }
-
-
+    return $zwerg;
 }
 
 function getRandomWord($len = 10) {

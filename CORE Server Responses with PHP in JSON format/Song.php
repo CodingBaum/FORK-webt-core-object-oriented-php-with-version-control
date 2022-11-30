@@ -2,7 +2,9 @@
 
 namespace CORE2;
 
-class Song {
+use JetBrains\PhpStorm\Internal\TentativeType;
+
+class Song implements \JsonSerializable {
     private $id;
     private $name;
     private $artist;
@@ -15,5 +17,16 @@ class Song {
         $this->artist = $artist;
         $this->trackNumber = $trackNumber;
         $this->duration = $duration;
+    }
+
+    public function jsonSerialize()
+    {
+        return array(
+            "id"=>$this->id,
+            "name"=>$this->name,
+            "artist"=>$this->artist,
+            "tracknumber"=>$this->trackNumber,
+            "duration"=>$this->duration
+        );
     }
 }

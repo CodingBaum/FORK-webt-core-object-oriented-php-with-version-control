@@ -2,7 +2,7 @@
 
 namespace CORE2;
 
-class OST {
+class OST implements \JsonSerializable {
     private $id;
     private $name;
     private $videoGameName;
@@ -15,5 +15,20 @@ class OST {
         $this->videoGameName = $videoGameName;
         $this->releaseYear = $releaseYear;
         $this->trackList = $trackList;
+    }
+
+    public function getID() {
+        return $this->id;
+    }
+
+    public function jsonSerialize()
+    {
+        return array(
+            "id"=>$this->id,
+            "name"=>$this->name,
+            "videoGameName"=>$this->videoGameName,
+            "releaseYear"=>$this->releaseYear,
+            "tracklist"=>$this->trackList
+        );
     }
 }
