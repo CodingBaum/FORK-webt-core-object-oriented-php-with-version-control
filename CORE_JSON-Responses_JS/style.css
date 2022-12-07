@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+hr {
+    border: black 0.5pt solid;
+}

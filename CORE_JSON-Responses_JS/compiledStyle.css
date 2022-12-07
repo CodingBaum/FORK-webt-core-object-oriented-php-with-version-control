@@ -513,8 +513,32 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.flex-1 {
-  flex: 1 1 0%;
+.m-auto {
+  margin: auto;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-1\/6 {
+  height: 16.666667%;
+}
+
+.h-2\/6 {
+  height: 33.333333%;
+}
+
+.h-1\/2 {
+  height: 50%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-80 {
+  width: 20rem;
 }
 
 .flex-col {
@@ -529,37 +553,34 @@ video {
   justify-content: center;
 }
 
-.border-l-pink-900 {
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-black {
   --tw-border-opacity: 1;
-  border-left-color: rgb(131 24 67 / var(--tw-border-opacity));
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
-.bg-black {
+.bg-amber-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.fill-blue-600 {
-  fill: #2563eb;
+  background-color: rgb(253 230 138 / var(--tw-bg-opacity));
 }
 
 .align-middle {
   vertical-align: middle;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.font-serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 .text-4xl {
@@ -567,10 +588,10 @@ video {
   line-height: 2.5rem;
 }
 
-.font-black {
-  font-weight: 900;
-}
-
 .underline {
   text-decoration-line: underline;
+}
+
+hr {
+  border: black 0.5pt solid;
 }
