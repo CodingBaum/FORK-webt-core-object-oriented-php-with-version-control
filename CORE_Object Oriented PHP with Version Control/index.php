@@ -7,7 +7,7 @@
     </head>
     <body>
         <header>
-            <h1 class="text-3xl font-bold underline">
+            <h1 class="text-3xl bg-black underline">
                 Das ist ein toller Titel
             </h1>
             <hr>
