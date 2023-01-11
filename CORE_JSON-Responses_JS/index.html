@@ -7,7 +7,7 @@
 <body class="overflow-x-hidden">
 
 <div class="flex flex-col items-center ">
-    <h1 class="text-8xl lg:text-6xl font-normal leading-normal mt-0 mb-2 text-rose-600 w-screen pt-96 lg:pt-60 pb-10 text-center bg-stone-100">☺ Career Finder ☺</h1>
+    <h1 class="text-8xl lg:text-6xl font-normal leading-normal mt-0 mb-2 text-rose-600 w-screen pt-96 lg:pt-60 pb-10 text-center bg-zinc-100">☺ Career Finder ☺</h1>
 
     <button class="lg:w-80 mt-10 px-28 py-14 lg:px-10 lg:py-5 text-5xl lg:text-2xl bg-rose-600 text-white active:bg-rose-600 font-bold uppercase rounded-lg shadow-md hover:bg-rose-800 hover:shadow-lg outline-none focus:outline-none ease-linear transition-all duration-150" type="button" id="btn">Find Career!</button>
     <div class="lg:w-1/2 w-3/4 mt-40 lg:mt-28 mb-60">
@@ -52,12 +52,12 @@
         fetch('data/OpenJsonData.json')
             .then(response => response.json())
             .then(data => {
-                let rand = Math.floor(Math.random() * data.length)
-                document.querySelector("#title").innerHTML = data[rand].Titel;
+                let randomJob = Math.floor(Math.random() * data.length)
+                document.querySelector("#title").innerHTML = data[randomJob].Titel;
                 document.querySelector("#placeTitle").innerHTML = "Ort:";
-                document.querySelector("#place").innerHTML = data[rand].Place;
+                document.querySelector("#place").innerHTML = data[randomJob].Place;
                 document.querySelector("#descriptionTitle").innerHTML = "Beschreibung:";
-                document.querySelector("#description").innerHTML = data[rand].Description;
+                document.querySelector("#description").innerHTML = data[randomJob].Description;
 
                 console.log(data);
             })
