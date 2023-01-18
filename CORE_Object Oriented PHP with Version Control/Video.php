@@ -34,6 +34,11 @@ class YoutubeVideo extends AVideo {
     {
         return '<iframe src="'.$this->source.'" title="'.$this->name.'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
     }
+
+    function getName()
+    {
+        return $this->name;
+    }
 }
 
 class Vimeo extends AVideo {
@@ -53,5 +58,9 @@ class Vimeo extends AVideo {
     function getHTMLCode()
     {
         return '<iframe src="'.$this->source.'" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+    }
+    function getName()
+    {
+        return $this->name;
     }
 }
