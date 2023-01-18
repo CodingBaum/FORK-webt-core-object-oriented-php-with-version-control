@@ -1,0 +1,19 @@
+{
+    "name": "markus/webtech",
+    "description": "webtech repo",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Markus\\Webtech\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Markus Wizany",
+            "email": "9143@htl.rennweg.at"
+        }
+    ],
+    "require": {
+        "typo3fluid/fluid": "^2.7"
+    }
+}
