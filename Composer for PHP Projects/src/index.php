@@ -6,6 +6,12 @@
     </head>
     <body>
         <?php
+        $value = '+43 1 22 33 444';
+
+        if (isset($_GET["submit"])) {
+            $value = ''.$_GET["input-field"];
+        }
+
         require '../vendor/autoload.php';
 
         use Endroid\QrCode\Builder\Builder;
@@ -19,13 +25,13 @@
         $result = Builder::create()
             ->writer(new PngWriter())
             ->writerOptions([])
-            ->data('tel:+43 1 22 33 444')
+            ->data("tel:".$value)
             ->encoding(new Encoding('UTF-8'))
             ->errorCorrectionLevel(new ErrorCorrectionLevelHigh())
             ->size(300)
             ->margin(10)
             ->roundBlockSizeMode(new RoundBlockSizeModeMargin())
-            ->labelText('')
+            ->labelText($value)
             ->labelFont(new NotoSans(20))
             ->labelAlignment(new LabelAlignmentCenter())
             ->validateResult(false)
@@ -33,6 +39,22 @@
 
         $result->saveToFile(__DIR__.'/qrcode.png');
         ?>
-        <img src="qrcode.png">
+
+        <div id="container">
+            <form method="get">
+                <label for="input-field">Enter a phone number:</label>
+                <input id="input-field" name="input-field" type="text" placeholder="+43 1 22 33 444"><br>
+                <input id="submit" name="submit" type="submit" value="Submit">
+            </form>
+            <?php
+            $picture = '';
+            if (isset($_GET["submit"])) {
+                $picture = "qrcode.png";
+            } else {
+                $picture = "empty.png";
+            }
+            echo "<img src='".$picture."' alt='QR-Code'>";
+            ?>
+        </div>
     </body>
 </html>
