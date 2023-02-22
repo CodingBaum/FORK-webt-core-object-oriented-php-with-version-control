@@ -3,6 +3,7 @@
     <head>
         <title>QR Code</title>
         <link href="style.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     </head>
     <body>
         <?php
