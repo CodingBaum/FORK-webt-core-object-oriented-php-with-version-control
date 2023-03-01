@@ -19,4 +19,9 @@ class Hotel
     {
         return $this->description;
     }
+
+    public function __toString(): string
+    {
+        return $this->name."\n".$this->description;
+    }
 }
