@@ -17,4 +17,12 @@ $handle = fopen($filename, "r");
 $contents = fread($handle, filesize($filename));
 fclose($handle);
 
+$contents = str_replace("###HOTELNAME###", $hotels[0]->getName(), $contents);
+$contents = str_replace("###HOTELDESCRIPTION###", $hotels[0]->getDescription(), $contents);
+
+$filename = "./index.html";
+$handle = fopen($filename, "w");
+$contents = fwrite($handle, $contents);
+fclose($handle);
+
 print($contents);
