@@ -8,6 +8,11 @@ array_push($hotels, new Hotel("Venetian Resort Hotel", "Dieses prachtvolle Casin
 array_push($hotels, new Hotel("Caesars Palace", "Dieses berühmte Casino-Hotel befindet sich in einem weitläufigen Gebäudekomplex im römischen Stil am lebhaften Las Vegas Strip. Es ist 1 Meile (1,6 km) von der Interstate 15 und 14 Meilen (22,5 km) vom Rio Secco Golf Club entfernt."));
 array_push($hotels, new Hotel("MGM Grand Hotel", "Das gewaltige, smaragdfarbene Casino-Resort befindet sich am südlichen Ende des Vegas Strip gegenüber dem Tropicana. Der knapp 14 Meter hohe bronzene Löwe ist das Markenzeichen des Hotels und steht vor den Toren Wache."));
 array_push($hotels, new Hotel("The Mirage", "Dieses legendäre Casino-Hotel mit Blick auf den berühmten 'ausbrechenden Vulkan' befindet sich am Las Vegas Strip neben dem Hotel Caesars Palace und gegenüber von Madame Tussauds Las Vegas."));
+array_push($hotels, new Hotel("The Cosmopolitan", "Dieses schicke Casino-Hotel mit Blick auf die Springbrunnen im angrenzenden Hotel Bellagio befindet sich am Las Vegas Strip auf der gegenüberliegenden Seite vom Planet Hollywood Resort and Casino. Es ist 2 Meilen (3,2 km) vom Flughafen McCarran International entfernt."));
+array_push($hotels, new Hotel("Wynn Las Vegas", "Das in einem Hochhaus mit einer charakteristisch gewölbten Fassade untergebrachte Luxus-Casino-Hotel liegt 1 Meile vom Las Vegas Convention Center entfernt."));
+array_push($hotels, new Hotel("Luxor", "Dieses farbenfrohe Casino-Resort im ägyptischen Stil liegt am südlichen Ende des Las Vegas Strip in einer 30-stöckigen Pyramide, auf deren Spitze sich ein 315.000-Watt-Scheinwerfer befindet. Zum internationalen Flughafen Las Vegas (Harry Reid) sind es 2 Meilen (3,2 km)."));
+array_push($hotels, new Hotel("Bellagio", "Dieses luxuriöse Casino-Resort am Las Vegas Strip bietet Blick auf einen 3 Hektar großen See mit tanzenden Springbrunnen. Es ist 2 Meilen (3,2 km) vom Flughafen Harry Reid International entfernt."));
+
 
 $filename = "./view.html";
 $handle = fopen($filename, "r");
@@ -24,7 +29,7 @@ $loopContent = "";
 foreach ($hotels as $value) {
     $content = str_replace("###HOTELNAME###", $value->getName(), $hotelTemplate);
     $content = str_replace("###HOTELDESCRIPTION###", $value->getDescription(), $content);
-    $loopContent = $loopContent . $content;
+    $loopContent = $loopContent . "<div class=\"col-md-4 col-sm-12\">" . $content ."</div>";
 }
 
 $contents = str_replace("###HOTELNAME###", $hotels[0]->getName(), $contents);
