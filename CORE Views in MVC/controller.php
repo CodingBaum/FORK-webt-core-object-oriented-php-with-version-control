@@ -12,6 +12,7 @@ array_push($hotels, new Hotel("The Cosmopolitan", "Dieses schicke Casino-Hotel m
 array_push($hotels, new Hotel("Wynn Las Vegas", "Das in einem Hochhaus mit einer charakteristisch gewölbten Fassade untergebrachte Luxus-Casino-Hotel liegt 1 Meile vom Las Vegas Convention Center entfernt."));
 array_push($hotels, new Hotel("Luxor", "Dieses farbenfrohe Casino-Resort im ägyptischen Stil liegt am südlichen Ende des Las Vegas Strip in einer 30-stöckigen Pyramide, auf deren Spitze sich ein 315.000-Watt-Scheinwerfer befindet. Zum internationalen Flughafen Las Vegas (Harry Reid) sind es 2 Meilen (3,2 km)."));
 array_push($hotels, new Hotel("Bellagio", "Dieses luxuriöse Casino-Resort am Las Vegas Strip bietet Blick auf einen 3 Hektar großen See mit tanzenden Springbrunnen. Es ist 2 Meilen (3,2 km) vom Flughafen Harry Reid International entfernt."));
+array_push($hotels, new Hotel("New York-New York Hotel & Casino", "Dieses lebhafte Casino-Hotel im Stil des Big Apple liegt zwischen dem Monte Carlo Resort und dem Excalibur Hotel am Las Vegas Strip. Es befindet sich in mehreren Hochhäusern, die der Skyline von New York nachempfunden sind."));
 
 
 $filename = "./view.html";
