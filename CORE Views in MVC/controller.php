@@ -30,7 +30,7 @@ $loopContent = "";
 foreach ($hotels as $value) {
     $content = str_replace("###HOTELNAME###", $value->getName(), $hotelTemplate);
     $content = str_replace("###HOTELDESCRIPTION###", $value->getDescription(), $content);
-    $loopContent = $loopContent . "<div class=\"col-md-4 col-sm-12 gx-md-5 gy-md-5\">" . $content ."</div>";
+    $loopContent = $loopContent . "<div class=\"col-md-4 col-sm-12\">" . $content ."</div>";
 }
 
 $contents = str_replace("###HOTELNAME###", $hotels[0]->getName(), $contents);
