@@ -1,0 +1,50 @@
+body {
+    overflow-x: hidden;
+}
+
+#rps-wrapper {
+    border: 1px solid black;
+    border-radius: .5rem;
+    width: 80%;
+    margin: 10% 1vh;
+}
+
+#rps-header {
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.rps-game {
+    display: flex;
+    flex-direction: row;
+}
+
+#date {
+    position: absolute;
+    margin-left: 2%;
+}
+
+#name1 {
+    position: absolute;
+    margin-left: 20%;
+}
+
+#pick1 {
+    position: absolute;
+    margin-left: 30%;
+}
+
+#middle {
+    position: absolute;
+    margin-left: 42%;
+}
+
+#pick2 {
+    position: absolute;
+    margin-left: 50%;
+}
+
+#name2 {
+    position: absolute;
+    margin-left: 60%;
+}
