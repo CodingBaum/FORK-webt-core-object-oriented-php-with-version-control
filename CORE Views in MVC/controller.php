@@ -14,7 +14,6 @@ array_push($hotels, new Hotel("Luxor", "Dieses farbenfrohe Casino-Resort im ägy
 array_push($hotels, new Hotel("Bellagio", "Dieses luxuriöse Casino-Resort am Las Vegas Strip bietet Blick auf einen 3 Hektar großen See mit tanzenden Springbrunnen. Es ist 2 Meilen (3,2 km) vom Flughafen Harry Reid International entfernt."));
 array_push($hotels, new Hotel("New York-New York Hotel & Casino", "Dieses lebhafte Casino-Hotel im Stil des Big Apple liegt zwischen dem Monte Carlo Resort und dem Excalibur Hotel am Las Vegas Strip. Es befindet sich in mehreren Hochhäusern, die der Skyline von New York nachempfunden sind."));
 
-
 $filename = "./view.html";
 $handle = fopen($filename, "r");
 $contents = fread($handle, filesize($filename));
