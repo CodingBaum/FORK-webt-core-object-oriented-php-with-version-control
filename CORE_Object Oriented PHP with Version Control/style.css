@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  background-color: #8999e1;
+  background-color: #abcdef;
 }
 
 * {
@@ -14,12 +14,6 @@ body {
   background-color: black;
   display: flex;
   justify-content: center;
-}
-
-iframe {
-  width: 800px;
-  height: 500px;
-  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
