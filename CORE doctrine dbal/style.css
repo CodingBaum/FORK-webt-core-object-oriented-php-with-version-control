@@ -19,32 +19,37 @@ body {
     flex-direction: row;
 }
 
-#date {
-    position: absolute;
-    margin-left: 2%;
+.id {
+    position: relative;
+    margin-left: 1%;
 }
 
-#name1 {
+.date {
+    position: absolute;
+    margin-left: 4%;
+}
+
+.name1 {
     position: absolute;
     margin-left: 20%;
 }
 
-#pick1 {
+.pick1 {
     position: absolute;
     margin-left: 30%;
 }
 
-#middle {
+.middle {
     position: absolute;
     margin-left: 42%;
 }
 
-#pick2 {
+.pick2 {
     position: absolute;
     margin-left: 50%;
 }
 
-#name2 {
+.name2 {
     position: absolute;
     margin-left: 60%;
 }
