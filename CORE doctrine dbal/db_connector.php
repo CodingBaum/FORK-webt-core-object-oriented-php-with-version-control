@@ -26,14 +26,67 @@ function getAllGames() {
     return $queryBuilder->fetchAllAssociative();
 }
 
-function getPlayerNameById($id) {
+function addGame($player1, $symbol1, $symbol2, $player2) {
+    $player1 =  strtoupper($player1);
+    $player2 =  strtoupper($player2);
+    $conn = getQueryBuilder();
+    $queryBuilderPlayer1 = $conn->createQueryBuilder();
+    $queryBuilderPlayer1
+        ->select('*')
+        ->from('player')
+        ->where('pk_name = ?')
+        ->setParameter(0, $player1);
+
+    if (!$queryBuilderPlayer1->fetchAssociative()) {
+        $conn = getQueryBuilder();
+        $queryBuilder1 = $conn->createQueryBuilder();
+        $queryBuilder1
+            ->insert('player')
+            ->values([
+                'pk_name' => '?'
+            ])
+            ->setParameter(0, $player1);
+
+        $queryBuilder1->executeStatement();
+    }
+
+    $queryBuilderPlayer2 = $conn->createQueryBuilder();
+    $queryBuilderPlayer2
+        ->select('*')
+        ->from('player')
+        ->where('pk_name = ?')
+        ->setParameter(0, $player2);
+
+    if (!$queryBuilderPlayer2->fetchAssociative()) {
+        $conn = getQueryBuilder();
+        $queryBuilder1 = $conn->createQueryBuilder();
+        $queryBuilder1
+            ->insert('player')
+            ->values([
+                'pk_name' => '?'
+            ])
+            ->setParameter(0, $player2);
+        $queryBuilder1->executeStatement();
+    }
+
+    $date = date("Y-m-d H:i:s");
+
     $conn = getQueryBuilder();
     $queryBuilder = $conn->createQueryBuilder();
     $queryBuilder
-        ->select('name')
-        ->from('player')
-        ->where('pk_id = ?')
-        ->setParameter(0, $id);
+        ->insert('Game')
+        ->values([
+            'fk_pk_player1' => '?',
+            'fk_pk_player2' => '?',
+            'symbol1' => '?',
+            'symbol2' => '?',
+            'date' => '?'
+        ])
+        ->setParameter(0, $player1)
+        ->setParameter(1, $player2)
+        ->setParameter(2, $symbol1)
+        ->setParameter(3, $symbol2)
+        ->setParameter(4, $date);
 
-    return $queryBuilder->fetchOne();
+    $queryBuilder->executeStatement();
 }

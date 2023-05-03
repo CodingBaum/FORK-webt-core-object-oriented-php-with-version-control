@@ -4,5 +4,39 @@
 }
 
 #submit {
+    cursor: pointer;
+    margin: 2vh;
     width: 20%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#line {
+    margin: 2vh 0;
+    height: 1px;
+    background-color: black;
+    width: 400px;
+}
+
+#linkHome {
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 4px;
+    margin: 2vh;
+    width: 50px;
+    text-align: center;
+    border-radius: .5rem;
+    transition: .2s;
+}
+
+#linkHome:hover {
+    background-color: #cfd0d5;
+}
+
+.error {
+    color: red;
 }

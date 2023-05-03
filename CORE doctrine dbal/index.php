@@ -32,16 +32,16 @@
     $loopContent = "";
 
     foreach ($allGames as $value) {
-        $content = str_replace("NAME1", getPlayerNameById($value['fk_pk_player1']) . "", $rpsTemplate);
+        $content = str_replace("NAME1", $value['fk_pk_player1'], $rpsTemplate);
         $content = str_replace("ID", $value['pk_id'], $content);
         $content = str_replace("PICK1", $value['symbol1'], $content);
         $content = str_replace("PICK2", $value['symbol2'], $content);
-        $content = str_replace("NAME2", getPlayerNameById($value['fk_pk_player2']) . "", $content);
+        $content = str_replace("NAME2", $value['fk_pk_player2'], $content);
         $content = str_replace("DATE", $value['date'] . "", $content);
         echo $content;
     }
     ?>
 </div>
-<a href="addRecord.php">Add Record</a>
+<a id="linkAdd" href="addRecord.php">Add Record</a>
 </body>
 </html>
