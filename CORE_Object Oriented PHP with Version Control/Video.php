@@ -32,7 +32,7 @@ class YoutubeVideo extends AVideo {
 
     function getHTMLCode()
     {
-        return '<iframe src="'.$this->source.'" title="'.$this->name.'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        return '<iframe src="'.$this->source.'" title="'.$this->name.'" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="rounded-4"></iframe>';
     }
 
     function getName()
@@ -57,7 +57,7 @@ class Vimeo extends AVideo {
 
     function getHTMLCode()
     {
-        return '<iframe src="'.$this->source.'" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+        return '<iframe src="'.$this->source.'" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen class="rounded-4"></iframe>';
     }
     function getName()
     {

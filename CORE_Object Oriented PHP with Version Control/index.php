@@ -50,13 +50,13 @@ if (isset($_POST['button2'])) {
 </header>
 <div class="h-[100%] items-center justify-center">
     <form method="post" class="h-[100%] flex flex-col md:flex-row items-center justify-center">
-        <input name="button1" type="submit" class="mb-8 md:mb-0 bg-gray-200 border border-black hover:bg-gray-300 transition text-7xl place-content-center rounded-3xl cursor-pointer flex justify-center align-middle w-[6rem] h-[6rem]" value="<">
-        <div class="mr-20 ml-20 ">
+        <input name="button1" type="submit" class=" bg-gray-200 border border-black hover:bg-gray-300 transition text-7xl place-content-center rounded-3xl cursor-pointer flex justify-center align-middle w-[6rem] h-[6rem]" value="<">
+        <div class="mr-20 ml-20 md:mb-0 ">
             <?php
             echo $_SESSION["videos"][$_SESSION["index"]]->getHTMLCode();
             ?>
         </div>
-        <input name="button2" type="submit" class="mt-8 md:mt-0 bg-gray-200 border border-black hover:bg-gray-300 transition text-7xl place-content-center rounded-3xl cursor-pointer flex justify-center align-middle w-[6rem] h-[6rem]" value=">">
+        <input name="button2" type="submit" class="lg:mt-8 sm:w-[3rem] lg:w-[6rem]  md:mt-0 bg-gray-200 border border-black hover:bg-gray-300 transition text-7xl place-content-center rounded-3xl cursor-pointer flex justify-center align-middle w-[6rem] h-[6rem]" value=">">
     </form>
 </div>
 </body>
