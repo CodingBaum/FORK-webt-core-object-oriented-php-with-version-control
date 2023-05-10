@@ -6,7 +6,7 @@ body {
     border: 1px solid black;
     border-radius: .5rem;
     width: 80%;
-    margin: 10% 1vh;
+    margin: 5% 1vh;
     /*max-height: 400px;
     overflow-y: scroll;
     overflow-x: hidden;*/
@@ -61,6 +61,7 @@ body {
 .delete {
     position: absolute;
     margin-left: 70%;
+    cursor: pointer;
 }
 
 #linkAdd {

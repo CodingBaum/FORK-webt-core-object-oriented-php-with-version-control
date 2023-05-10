@@ -90,3 +90,8 @@ function addGame($player1, $symbol1, $symbol2, $player2) {
 
     $queryBuilder->executeStatement();
 }
+
+function deleteGame($id) {
+    $conn = getQueryBuilder();
+    $conn->delete("Game", ['pk_id' => $id]);
+}

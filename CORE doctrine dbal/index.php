@@ -22,6 +22,11 @@
     <?php
     include 'db_connector.php';
 
+    if (isset($_GET["DELETE"])) {
+        $id = $_GET["id"];
+        deleteGame($id);
+    }
+
     $allGames = getAllGames();
 
     $filename = "./RPS-Game_template.html";
