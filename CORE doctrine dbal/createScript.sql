@@ -4,7 +4,8 @@ USE webtDoctrine;
 
 create table Player
 (
-    pk_name varchar(50) primary key
+    pk_id INTEGER primary key auto_increment,
+    pk_name varchar(50)
 );
 
 create table Game

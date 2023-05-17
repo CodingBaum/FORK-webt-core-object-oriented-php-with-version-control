@@ -22,7 +22,7 @@
     <?php
     include 'db_connector.php';
 
-    if (isset($_GET["DELETE"])) {
+    if (isset($_GET["DELETE"]) && isset($_GET["id"])) {
         $id = $_GET["id"];
         deleteGame($id);
     }
