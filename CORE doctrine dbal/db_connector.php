@@ -1,8 +1,31 @@
 <?php
 use Doctrine\DBAL\DriverManager;
+use Doctrine\ORM\EntityManager;
+use Doctrine\ORM\ORMSetup;
 
 require_once 'vendor\autoload.php';
 
+$config = ORMSetup::createAttributeMetadataConfiguration(
+    paths: array(__DIR__."/src"),
+    isDevMode: true,
+);
+
+$connectionParams = [
+    'dbname' => 'webtDoctrine',
+    'user' => 'root',
+    'password' => '',
+    'host' => 'localhost',
+    'driver' => 'pdo_mysql',
+    'port' => '3306'
+];
+
+$connection = DriverManager::getConnection($connectionParams);
+
+$entityManager = new EntityManager($connection, $config);
+
+
+
+/*
 function getQueryBuilder() {
     $connectionParams = [
         'dbname' => 'webtDoctrine',
@@ -95,3 +118,5 @@ function deleteGame($id) {
     $conn = getQueryBuilder();
     $conn->delete("Game", ['pk_id' => $id]);
 }
+
+*/
